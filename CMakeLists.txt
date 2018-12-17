@@ -13,8 +13,8 @@ ExternalProject_Add(gtsam_src
   UPDATE_COMMAND ""
   CONFIGURE_COMMAND cmake -DCMAKE_INSTALL_PREFIX:PATH=${CATKIN_DEVEL_PREFIX} -DGTSAM_USE_SYSTEM_EIGEN=ON
   -DCMAKE_BUILD_TYPE=Release ../gtsam_src
-  BUILD_COMMAND make
-  INSTALL_COMMAND make install
+  BUILD_COMMAND make -j6
+  INSTALL_COMMAND make -j6 install
 )
 
 cs_install()
