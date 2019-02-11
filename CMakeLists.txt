@@ -18,4 +18,7 @@ ExternalProject_Add(gtsam_src
 )
 
 cs_install()
-cs_export(CFG_EXTRAS gtsam-extras.cmake)
+cs_export(
+  CFG_EXTRAS gtsam-extras.cmake
+  INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include
+)
